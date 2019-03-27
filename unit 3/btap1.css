@@ -1,0 +1,36 @@
+.ten_Gia{
+	color: red;
+	text-align: center;
+	display: inline-block;
+}
+#dt1{
+	border:1px red solid;
+	width: 15%;
+	height: 200px;
+	background-image: url('../../1.jpg');
+	background-repeat: no-repeat;
+	float: left;
+	display: inline-block;
+}
+#dt2{
+	border:1px black solid;
+	width: 15%;
+	height: 200px;
+	background-image: url('../../2.jpg');
+	background-position: center top;
+	background-repeat: no-repeat;
+	float: left;
+
+
+}
+#dt3{
+	border:1px black solid;
+	width: 15%;
+	height: 200px;
+	background-image: url('../../3.jpg');
+	background-position: center top;
+	background-repeat: no-repeat;
+	float: left;
+
+
+}

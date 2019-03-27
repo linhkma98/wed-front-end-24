@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.nd{
+			float: left;
+		}
+		.nd>p{
+			position: absolute;
+			left: 0;
+			margin: 0;
+			padding: 10px;
+			background-color: #E6E6E6;
+			display: none;
+
+		}
+		.nd>button{
+			margin: 0px 10px;
+			padding: 10px 20px;
+			background-color: #2EFE2E;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<div class="nd">
+		<button>Tab1</button>
+		<p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod </p>
+	</div>
+	<div class="nd" >
+		<button>Tab2</button>
+		<p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+	</div>
+	<div  class="nd">
+		<button>Tab3</button>
+		<p> 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+	</div>
+	<script type="text/javascript">
+			var button = document.getElementsByTagName('button');
+			var content = document.getElementsByTagName("p");
+			for (var i = 0; i < content.length; i++) {
+				button[i].addEventListener("click",function(){
+					for (var j = 0; j < content.length; j++) {
+						content[j].style.display="none";
+					}
+					this.nextElementSibling.style.display="block";
+				});
+			}
+		
+	</script>
+
+</body>
+</html>

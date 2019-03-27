@@ -1,0 +1,29 @@
+h1{
+	/* áp dụng cho thẻ p div h1-h6 */
+	background-color: red;
+	width:18%;
+	height:50px;
+	/* color-img-repest - position - attachment: thưa tự nếu viết gộp */
+	/* background-image: url('../samsung1.jpg'); */
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 10px 50px;
+
+	font-family: Arial;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 900;
+
+	color: blue;
+	text-indent: 50px;
+		/* cho văn bản thụt vào đầu dòng */
+	text-align: center;
+	text-decoration: none;
+
+	display: inline-block;
+
+
+}
+h1:hover{
+	color: yellow
+}

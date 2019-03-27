@@ -1,0 +1,39 @@
+@font-face{
+	font-family: 'font-o-ly';
+	src: url('../../UNITapviet_5_ly.ttf');
+}
+
+.rec{
+	width: 400px;
+	height: 200px;
+	background-color: lightgrey;
+	border: 1px solid red;
+}
+#box-model{
+	width: 400px;
+	height: 200px;
+	border: 1px solid red;
+	background-color: lightgrey;
+	margin-top: 20px;
+	padding-left: 30px;
+	color: #ff0200;
+	font-size: 50px;
+	position: relative;
+}
+.child{
+	width: 60px;
+	height: 60px;
+	background-color: red;
+	position: absolute;
+}
+#child1{
+	top: 50px;
+	left: 60px;
+	z-index: 3;
+}
+#child2{
+	top: 50px;
+	left: 40px;
+	background-color: green;
+	z-index: 2;
+}

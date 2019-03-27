@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form name="FormDangki">
+		 <!-- cho phép ng dùng nhập infor -->
+		Họ tên: <input type="text" name="hoTen" value="" placeholder="Nhập họ tên vào đây">
+		<br><br>
+		Thời gian học khóa Front End: <br>
+		<!-- chọn nhiều cái -->
+		<input type="checkbox" name="thoiGianHoc" value="2">Thứ 2
+		<input type="checkbox" name="thoiGianHoc" value="3">Thứ 3
+		<input type="checkbox" name="thoiGianHoc" value="4">Thứ 4 <br>
+		<input type="checkbox" name="thoiGianHoc" value="5">Thứ 5
+		<input type="checkbox" name="thoiGianHoc" value="6">Thứ 6
+		<input type="checkbox" name="thoiGianHoc" value="7">Thứ 7
+		<input type="checkbox" name="thoiGianHoc" value="cn">Chủ Nhật <br>
+
+		Giới tính:
+		<!-- chọn 1 cái -->
+		<input type="radio" name="gioiTinh" value="Nam" placeholder="">Nam
+		<input type="radio" name="gioiTinh" value="Nu" placeholder="">Nữ <br>
+
+		Mật khẩu:
+		<!-- mật khẩu -->
+		<input type="password" name="matKhau" value="" placeholder=""> <br>
+
+		Hồ sơ đính kèm:
+		<!-- upload file -->
+		<input type="file" name="hoSo" value="" placeholder=""> <br>
+
+		Tỉnh:
+		<!-- chọn 1 cái (khi có nhiều lựa chọn) -->
+		<select name="tinh">
+			<option value="hn">Hà Nội</option>
+			<option value="bn">Bắc Ninh</option>
+			<option value="hcm">Hồ Chí Minh</option>
+			<option value="x">Tỉnh Khác</option>
+		</select> <br>
+
+		Ý kiến:
+		<textarea name="yKien" rows="5" cols="50">Ý kiến khác:</textarea> <br>
+
+		<input type="reset" name="nhapLai" value="nhập lại">
+		<!-- cho phép nhập lại -->
+
+		<input type="submit" name="guiDangKi" value=" Gửi đăng kí">
+		<input type="button" name="khac" value="Khác">
+		
+
+		
+	</form>
+
+</body>
+</html>

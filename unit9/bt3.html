@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.checkBox{
+			width: 500px;
+			height: 40px;
+			border: 1px solid black;
+			padding-left: 10px;
+			padding-top: 15px;
+			background-color: skyblue;
+		}
+		.checkBox:hover{
+			background-color: #40FF00;
+		}
+		.checked{
+			position: relative;
+		}
+		.text{
+			position: absolute;
+			left: 70px;
+		}
+		
+	</style>
+
+
+</head>
+<body>
+			<div class="checkBox">
+				<input type="checkbox" name="" value="" class="checked">
+				<span class="text">Lorem ipsum dolor sit ametborum.</span>
+			</div>
+
+			<div class="checkBox">
+				<input type="checkbox" name="" value="" class="checked">
+				<span class="text">Lorem ipsum dolor sit ametborum.</span>
+			</div>
+			<div class="checkBox">
+				<input type="checkbox" name="" value="" class="checked">
+				<span class="text">Lorem ipsum dolor sit ametborum.</span>
+			</div>
+			<div class="checkBox">
+				<input type="checkbox" name="" value="" class="checked" >
+				<span class="text">Lorem ipsum dolor sit ametborum.</span>
+			</div>
+			<div class="checkBox">
+				<input type="checkbox" name="" value="" class="checked">
+				<span class="text">Lorem ipsum dolor sit ametborum.</span>
+			</div>
+			<div class="checkBox">
+				<input type="checkbox" name="" value="" class="checked">
+				<span class="text">Lorem ipsum dolor sit ametborum.</span>
+			</div>
+			<div class="checkBox">
+				<input type="checkbox" name="" value="" class="checked">
+				<span class="text">Lorem ipsum dolor sit ametborum.</span>
+			</div>
+			<div class="checkBox">
+				<input type="checkbox" name="" value="" class="checked">
+				<span class="text">Lorem ipsum dolor sit ametborum.</span>
+			</div>
+	
+		
+		<div >
+			<div >
+				<button class="check">Check All</button>
+			</div>
+			<div >
+				<button class="uncheck">Uncheck All</button>
+			</div>
+			
+		</div>
+	
+<script type="text/javascript">
+
+	var input = document.getElementsByTagName("input");
+
+document.getElementsByClassName("check")[0].addEventListener("click", function(){
+	for (var i = 0; i < input.length; i++) {
+		input[i].checked=true;
+	}
+});
+
+document.getElementsByClassName("uncheck")[0].addEventListener("click", function(){
+	for (var i = 0; i < input.length; i++) {
+		input[i].checked=false;
+	}
+});
+	
+</script>
+
+</body>
+</html>
+
+
+<!-- function checkAll()
+	{
+		var check=document.getElementsByTagName('input');
+		for (var i = 0; i < check.length; i++) {
+			check[i].checked=true;
+		}
+	}
+	function uncheckAll()
+	{
+		var check=document.getElementsByTagName('input');
+		for (var i = 0; i < check.length; i++) {
+			check[i].checked=false;
+		}
+	} -->
+
+
+
+
+
+<!-- ////js
+
+var input = document.getElementsByTagName("input");
+
+document.getElementsByClassName("check")[0].addEventListener("click", function(){
+	for (var i = 0; i < input.length; i++) {
+		input[i].checked=true;
+	}
+});
+
+document.getElementsByClassName("uncheck")[0].addEventListener("click", function(){
+	for (var i = 0; i < input.length; i++) {
+		input[i].checked=false;
+	}
+});
+ -->
