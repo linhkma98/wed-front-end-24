@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+			}
+			#slide-show {
+				width: 60%;
+				height: 400px;
+				margin: 0 auto;
+				position: relative;
+				margin-top: 50px;
+			}
+			.img-slide {
+				max-width: 100%;
+				min-width: 100%;
+				max-height: 100%;
+				min-height: 100%;
+				
+			}
+
+			#prev {
+				position: absolute;
+				top: 40%;
+				left: 0px;
+				cursor: pointer;
+				background: gray;
+				border: 1px solid gray;
+				opacity: 0.8;
+				width: 50px;
+				display: none;
+			}
+
+			#next {
+				position: absolute;
+				top: 40%;
+				right: 0px;
+				cursor: pointer;
+				background: gray;
+				border: 1px solid gray;
+				opacity: 0.5;
+				width: 50px;
+				display: none;
+			}
+			.conveyor-btn {
+				width: 50%;
+				height: 30px;
+				position: absolute;
+				bottom: 2px;
+				right: 0px;
+				opacity: 0.8;
+			}
+			.button-element {
+				width: 20px;
+				height: 20px;
+				margin: 3px;
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript" >
+			window.onload = function(){
+				document.getElementById('slide-show').addEventListener('mouseover', function() {
+					document.getElementById('prev').style.display="block";
+					document.getElementById('next').style.display="block";
+				});
+				document.getElementById('slide-show').addEventListener('mouseout', function() {
+					document.getElementById('prev').style.display="none";
+					document.getElementById('next').style.display="none";
+				});
+				var imgSlide 	= document.getElementsByClassName("img-slide");
+				var prev 		= document.getElementById('prev');
+				var next		= document.getElementById('next');
+				var numbSide = 0;
+				amimationSlide();
+				prev.addEventListener('click', function() {
+					numbSide--;
+					showSlide();
+				});
+
+				next.addEventListener('click', function() {
+					numbSide++;
+					showSlide();
+				});
+				function amimationSlide() {
+					for(var i = 0; i < imgSlide.length; i++) {
+						imgSlide[i].style.display="none";
+					}
+
+					numbSide++;
+					if(numbSide < 0) {
+						numbSide = imgSlide.length - 1;
+					}
+					if(numbSide > imgSlide.length) {
+						numbSide = 1;
+					}
+
+					imgSlide[numbSide-1].style.display="block";
+
+					setTimeout(amimationSlide, 5000);
+				}
+				function showSlide() {
+					for(var i = 0; i < imgSlide.length; i++) {
+						imgSlide[i].style.display="none";
+					}
+
+					if(numbSide < 1) {
+						numbSide = imgSlide.length;
+					}
+					if(numbSide > imgSlide.length) {
+						numbSide = 1;
+					}
+
+					imgSlide[numbSide-1].style.display="block";
+				}
+			}
+			function elementSlide(n) {
+				for(var i = 0; i < document.getElementsByClassName("img-slide").length; i++) {
+					document.getElementsByClassName("img-slide")[i].style.display="none";
+				}
+				document.getElementsByClassName("img-slide")[n].style.display="block";
+			}
+		</script>
+	</head>
+	<body>
+		<center id="slide-show">
+			<img src="https://img2.thuthuatphanmem.vn/uploads/2018/12/25/anh-gia-xinh-sieu-cute_012907577.jpg" class="img-slide">
+			<img src="https://cdn.pose.com.vn/assets/2018/08/86-4.jpg" class="img-slide">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBkbHtq6Bks95eJjD9Z6J4K68CIv2tufEhwLBHntjVr46dSxAJ" class="img-slide">
+			<img src="https://cdn.pose.com.vn/assets/2018/03/49af6edc00000578-5448367-trickyexitthesuperstarseemedtohavetroublegettinginand-a-41519924608584-15199697892781411341988-44.jpg" class="img-slide">
+			<div class="conveyor-btn">
+				<button class="button-element" onclick="elementSlide(0)"></button>
+				<button class="button-element" onclick="elementSlide(1)"></button>
+				<button class="button-element" onclick="elementSlide(2)"></button>
+				<button class="button-element" onclick="elementSlide(3)"></button>
+			</div>
+			<img src="http://icons.iconarchive.com/icons/iconsmind/outline/512/Arrow-Back-2-icon.png" id="prev">
+			<img src="http://www.iconarchive.com/download/i95457/iconsmind/outline/Arrow-Next.ico" id="next">
+		</center>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+		table{
+			position: relative;
+		}
+		#bt1{
+			position: absolute;
+			left: 100px;
+			top: 340px;
+			background-color: red;
+			color: white;
+			height: 30px;
+			width: 100px;
+		}
+		#bt2{
+			position: absolute;
+			left: 400px;
+			top: 340px;
+			background-color: red;
+			color: white;
+			height: 30px;
+			width: 100px;
+		}
+		
+	</style>
+	<script type="text/javascript">
+		function load(){
+			var formDangKy = document.getElementsByTagName("form")[0];
+		formDangKy.addEventListener("submit",function(){
+		 	if(formDangKy.hoVaTen.value.trim()==""){
+				alert("Hãy nhập thông tin họ và tên")
+		 	}
+		 	if(formDangKy.email.value.trim()==""){
+				alert("Hãy nhập email")
+		 	}
+		 	if(formDangKy.sdt.value.trim()==""){
+				alert("Hãy nhập email")
+		 	}
+		 	if(formDangKy.matKhau.value.trim()==""){
+				alert("Hãy nhập email")
+		 	}
+		 });
+		}
+	</script>
+</head>
+<body onload="load()">
+	<form name="formDangKy">
+		<table width="600px" height="300px" bordercolor="black">
+			<tr>
+				<td>Họ và tên</td>
+				<td><input type="text" name="hoVaTen" value="" placeholder="nhập họ tên"></td>
+			</tr>
+			<tr>
+				<td>Giới tính</td>
+				<td>
+					<input type="radio" name="gt" value="Nam" placeholder="">Nam
+					<input type="radio" name="gt" value="Nu" placeholder="">Nữ
+				</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="email" name="email" value="" placeholder="nhập email"></td>
+			</tr>
+			<tr>
+				<td>Số điện thoại</td>
+				<td><input type="number" name="sdt" value="" placeholder="nhập số điện thoại" ></td>
+			</tr>
+			<tr>
+				<td>Mật khẩu</td>
+				<td><input type="password" name="matKhau" value="" placeholder=""></td>
+			</tr>
+			<tr>
+				<td>Xác nhận mật khẩu</td>
+				<td><input type="password" name="xacNhanMatKhau" value="" placeholder=""></td>
+			</tr>
+		</table>
+	</form>
+	<span>
+		<input id="bt1" type="submit" name="" value="Đăng kí">
+		<input id="bt2" type="button" name="" value="Xóa trắng">
+	</span>
+
+</body>
+</html>

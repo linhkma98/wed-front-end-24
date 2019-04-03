@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="font-awesome.css">
+	<style type="text/css">
+
+		.content{
+			display: none;
+			width: 600px;
+			height: 120px;
+			background-color: #424242;
+			border: 1px solid blue;
+			color: white;
+		}
+		.tab{
+			width: 600px;
+			height: 50px;
+			border: 1px solid blue;
+			background-color: #424242;
+		}
+		button{
+			background-color: #3ADF00;
+			
+
+		}
+		.text{
+			color: #3ADF00;
+			font-size: 20px;
+			
+		}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="title">
+			
+		</div>
+
+		<div class="tab">
+			<button><i class="fa fa-plus"></i></button>
+			<span class="text">This is an expanded panel</span>
+			
+		</div>
+		<div class="content">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</div>
+		<div class="tab">
+			<button><i class="fa fa-plus"></i></button>
+			<span class="text">This is an expanded panel</span>
+			
+		</div>
+		<div class="content">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</div>
+		<div class="tab">
+			<button><i class="fa fa-plus"></i></button>
+			<span class="text">This is an expanded panel</span>
+			
+		</div>
+		<div class="content">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</div>
+		<div class="tab">
+			<button><i class="fa fa-plus"></i></button>
+			<span class="text">This is an expanded panel</span>
+			
+		</div>
+		<div class="content">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+		</div>
+		
+	</div>
+
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$('button').click(function(){
+				var check = $(this).html()
+				if(check =='<i class="fa fa-plus"></i>'){
+					$(this).html('<i class="fa fa-minus"></i>');
+					$(this).parent().next().show(1000);
+				}else{
+					$(this).html('<i class="fa fa-plus"></i>');
+					$(this).parent().next().hide(1000);
+				}
+
+			});
+		});
+	</script>
+
+</body>
+</html>

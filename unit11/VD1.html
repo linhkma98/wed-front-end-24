@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.color{
+		padding: 10px;
+		border: 1px solid black;
+		margin: 10px;
+	}
+	div{
+		margin-top: 20px;
+	}
+
+</style>
+
+
+</head>
+<body>
+
+	<select name="" id="opt" >
+		<option value="red">Red</option>
+		<option value="blue">Blue</option>
+		<option value="green">Green</option>
+		<option value="yellow">Yellow</option>
+		
+	</select>
+
+	<input type="text" name="" value="" placeholder="Search..." >
+	
+	<span id="red" class="color" ></span>
+	<span id="blue" class="color" ></span>
+	<span id="purple" class="color"></span>
+	<span id="green" class="color"></span>
+	<span id="skyblue" class="color"></span>
+	<span id="orange" class="color"  ></span>
+	<span id="yellow" class="color" ></span>
+	
+	
+	<div class="abc">
+		The div 2
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		
+	</div>
+	
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+
+		var colors = $(".color")
+
+		colors.each(function(){
+			$(this).css("background-color",$(this).attr("id"));
+		});
+		colors.mouseenter(function(){
+			$("div").css("background-color",$(this).attr("id"));
+		});
+		colors.mouseleave(function(){
+			$("div").css("backgrounds-color","white");
+		});
+	});
+</script>
+</body>
+</html>

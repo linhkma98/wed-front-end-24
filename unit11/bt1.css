@@ -1,0 +1,22 @@
+.title{
+	width: 60%;
+	height: 120px;
+	background-color: red;
+
+}
+h1{
+	text-align: center;
+	color: white;
+
+}
+.inp{
+	text-align: center;
+}
+#input{
+	width: 500px;
+	height: 30px;
+}
+#add{
+	width: 200px;
+	height: 36px;
+}

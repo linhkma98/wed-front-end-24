@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<link rel="stylesheet" type="text/css" href="font-awesome.css">
+	<style type="text/css">
+	.title{
+		width: 60%;
+		height: 120px;
+		background-color: red;
+
+	}
+	h1{
+		text-align: center;
+		color: white;
+
+	}
+	.inp{
+		text-align: center;
+	}
+	#input{
+		width: 500px;
+		height: 30px;
+	}
+	#add{
+		width: 200px;
+		height: 36px;
+	}
+
+</style>
+
+</head>
+<body>
+	<div class="main">
+		<div class="title">
+			<h1>My To Do Listen</h1>
+			<div class="inp">
+				<input type="text" id="input" name="" value="" placeholder="Title...">
+				<button id="add">Add</button>
+				
+			</div>
+			
+		</div>
+		<table cellspacing="0" width="60%" bgcolor="#E6E6E6">
+			<tbody id="content">
+				
+			</tbody>
+		</table>
+		
+	</div>
+
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$("#add").on('click',function(){
+				var input = $("#input").val();
+				$("#content").append(`
+					<tr>
+					<td class="checkbox"></td>
+					<td class="ip">`+input+`</td>
+					<td class="bt1 fa fa-times"></td>
+					</tr>`);
+				$('#input').val("");
+			});
+
+			$('body').on('click','.bt1',function(){
+				$(this).parent().remove();
+			});
+
+			$('body').on('click','tr',function(){
+				var check = $(this).children('.checkbox').html();
+				if(check == ''){
+					$(this).children('.checkbox').html('<i class="fa fa-check" ></i>');
+					
+
+				}else{
+					$(this).children('.checkbox').html('');
+				}
+			})
+
+		});
+		
+	</script>
+
+</body>
+</html>
