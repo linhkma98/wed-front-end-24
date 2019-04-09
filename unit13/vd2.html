@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../javascrips/toastr.min.css">
+</head>
+<body>
+	<button class="ahihi">Submit</button>
+
+	<script type="text/javascript" src="../javascrips/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../javascrips/toastr.min.js"></script>
+	<script >
+		$(function(){
+			$(".ahihi").on("click",function(){
+				Command: toastr["info"]("hihi")
+				toastr.options = {
+					"closeButton": false,
+					"debug": false,
+					"newestOnTop": true,
+					"progressBar": false,
+					"positionClass": "toast-top-center",
+					"preventDuplicates": false,
+					"onclick": null,
+					"showDuration": "300",
+					"hideDuration": "1000",
+					"timeOut": "5000",
+					"extendedTimeOut": "1000",
+					"showEasing": "swing",
+					"hideEasing": "linear",
+					"showMethod": "fadeIn",
+					"hideMethod": "fadeOut"
+				}
+			})
+		})
+	</script>
+	
+
+</body>
+</html>
